@@ -59,6 +59,14 @@ Updates are GPG-signed. The updater verifies every download against our public k
 
 The SKILL.md references optional hardening features (GPG emergency override, append-only learning log, credential scrubber, budget gates). These require additional setup described in the file. The core review system works without them.
 
+## all editions
+
+| Edition | Model | Cost | Link |
+|---------|-------|------|------|
+| **Opus** | Claude Opus 4.6 | Highest quality, highest cost | [triple-gate](https://github.com/coderook520/triple-gate) |
+| **Sonnet** | Claude Sonnet 4.6 | Balanced quality/cost | [triple-gate-Sonnet](https://github.com/coderook520/triple-gate-Sonnet) |
+| **Haiku** | Claude Haiku 4.5 | Fastest, lowest cost | [triple-gate-Haiku](https://github.com/coderook520/triple-gate-Haiku) |
+
 ## license
 
 MIT
