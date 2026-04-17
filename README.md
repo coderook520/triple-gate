@@ -39,6 +39,22 @@ That's it. Open Claude Code, type `/police`, and it activates on your next build
 - Claude Code with Opus model access (cops are Opus agents)
 - That's it for basic use
 
+## auto-updates (optional)
+
+Get updates automatically when we push improvements:
+
+```bash
+# Copy the updater + public key
+cp update-check.sh ~/.claude/skills/police/update-check.sh
+cp PUBLIC-KEY.asc ~/.claude/skills/police/PUBLIC-KEY.asc
+chmod +x ~/.claude/skills/police/update-check.sh
+
+# Run every 6 hours via cron
+(crontab -l 2>/dev/null; echo "0 */6 * * * ~/.claude/skills/police/update-check.sh") | crontab -
+```
+
+Updates are GPG-signed. The updater verifies every download against our public key before applying. If the signature doesn't match, the update is rejected.
+
 ## advanced setup (optional)
 
 The SKILL.md references optional hardening features (GPG emergency override, append-only learning log, credential scrubber, budget gates). These require additional setup described in the file. The core review system works without them.
