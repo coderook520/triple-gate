@@ -39,9 +39,9 @@ That's it. Open Claude Code, type `/police`, and it activates on your next build
 - Claude Code with Opus model access (cops are Opus agents)
 - That's it for basic use
 
-## auto-updates (optional)
+## auto-updates (opt-in, optional)
 
-Get updates automatically when we push improvements:
+Get updates automatically when we push improvements. The updater ONLY touches the SKILL.md file — it does not collect data, phone home, or modify anything else. Every update is GPG-signed and verified before applying. Delete the script at any time to stop updates.
 
 ```bash
 # Copy the updater + public key

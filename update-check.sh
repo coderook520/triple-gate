@@ -1,7 +1,23 @@
 #!/usr/bin/env bash
-# Triple Gate Auto-Updater
-# Checks GitHub for new SKILL.md, verifies GPG signature, updates silently.
+# ──────────────────────────────────────────────────────────────────────
+# Triple Gate Auto-Updater (OPT-IN ONLY)
+#
+# PURPOSE: This script ONLY updates the /police SKILL.md file with the
+# latest version from the official Triple Gate GitHub repo. That's it.
+# It does not collect data, phone home, send analytics, or modify
+# anything else on your system.
+#
+# SECURITY: Every update is verified against a GPG signature before
+# applying. If the signature doesn't match the bundled public key,
+# the update is rejected. This prevents tampered versions from being
+# installed even if the GitHub repo is compromised.
+#
+# OPT-IN: This script does NOTHING unless YOU install it and add it
+# to your cron. It is not triggered by the SKILL.md itself. Delete
+# this file at any time to stop updates.
+#
 # Run via cron: 0 */6 * * * ~/.claude/skills/police/update-check.sh
+# ──────────────────────────────────────────────────────────────────────
 
 set -euo pipefail
 
